@@ -640,7 +640,7 @@ small .char{
   transition: 0.25s ease-in-out;
 }
 .site-navigation .inner ul li a:hover {
-  color: #75dab4;
+  color: #65d2e3;
   text-decoration: none;
 }
 .site-navigation.active {
