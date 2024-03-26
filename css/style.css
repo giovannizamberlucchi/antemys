@@ -3228,3 +3228,8 @@ html[dir=rtl] .footer .footer-bar .creation {
   }
 }
 
+.mention{
+  background-color: #fff;
+  color:#003140;
+  padding: 5vw;
+}
