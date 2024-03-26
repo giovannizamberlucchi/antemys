@@ -121,6 +121,9 @@ aside {
 }
 
 /* FORM ELEMENTS */
+
+
+
 select {
   width: 400px;
   max-width: 100%;
@@ -138,31 +141,35 @@ option {
   background-color: #fff;
 }
 
+select {
+  border: 1px solid #65d1e2;
+}
+
 input[type=text] {
   max-width: 100%;
   height: 58px;
-  border: 1px solid #eee;
+  border: 1px solid #65d1e2;
   padding: 0 20px;
 }
 
 input[type=email] {
   max-width: 100%;
   height: 58px;
-  border: 1px solid #eee;
+  border: 1px solid #65d1e2;
   padding: 0 20px;
 }
 
 input[type=search] {
   max-width: 100%;
   height: 58px;
-  border: 1px solid #eee;
+  border: 1px solid #65d1e2;
   padding: 0 20px;
 }
 
 input[type=password] {
   max-width: 100%;
   height: 58px;
-  border: 1px solid #eee;
+  border: 1px solid #65d1e2;
   padding: 0 20px;
 }
 
@@ -189,7 +196,7 @@ button[type=submit] {
 textarea {
   max-width: 100%;
   height: 140px;
-  border: 1px solid #eee;
+  border: 1px solid #65d1e2;
   padding: 20px;
 }
 
@@ -927,13 +934,14 @@ small .char{
 }
 .left-side .logo {
   display: inline-block;
-  margin-bottom: auto;
+ 
 }
 .left-side .logo img {
   width: 100%;
 }
 .left-side .hamburger {
   margin: auto;
+  vertical-align: middle;
 }
 .left-side .follow-us {
   width: 100px;
@@ -1086,6 +1094,7 @@ small .char{
   background: none;
 }
 .slider .slide-progress {
+  visibility: hidden;
   width: 220px;
   display: flex;
   flex-wrap: wrap;
@@ -1097,12 +1106,14 @@ small .char{
   text-align: center;
 }
 .slider .slide-progress span {
+  visibility: hidden;
   display: inline-block;
   color: #fff;
   font-family: "Fjalla One", sans-serif;
   font-size: 14px;
 }
 .slider .slide-progress .swiper-pagination {
+  visibility: hidden;
   width: 160px;
   height: 2px;
   margin: auto 10px;
@@ -1111,6 +1122,7 @@ small .char{
   background: rgba(255, 255, 255, 0.3);
 }
 .slider .slide-progress .swiper-pagination .swiper-pagination-progressbar-fill {
+  visibility: hidden;
   background: #fff;
 }
 
@@ -1498,6 +1510,7 @@ small .char{
 /* ICON CONTENT BLOCK */
 .col-lg-3{margin: 5% 0;}
 .icon-content-block {
+  
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -1552,6 +1565,7 @@ figure.figuresvg{
 }
 
 .icon-content-block .content-block h6 {
+  font-size: 20px;
   display: block;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -1578,7 +1592,9 @@ figure.figuresvg{
   font-weight: 600;
   color: #133140;
 }
-
+.content-block.selected{
+  min-height:65vh;
+}
 
 /* TEXT CONTENT BLOCK */
 .text-content-block {
@@ -2318,9 +2334,11 @@ font-weight: 600;
   display: block;
 }
 .contact address p {
+  font-size: 20px;
   margin: 0;
 }
 .contact address a {
+  font-size: 20px;
   text-decoration: underline;
 }
 .contact .contact-form {
@@ -2602,6 +2620,14 @@ html[dir=rtl] .footer .footer-bar .creation {
 
 /* RESPONSIVE TABLET FIXES */
 @media only screen and (max-width: 991px), only screen and (max-device-width: 991px) {
+  .content-block.selected{
+    min-height: 50vh;
+  }
+  .footerimg{
+    width:30%;
+    padding-bottom: 20px;
+  }
+
   .section-title {
     font-size: 8vw;
     margin-bottom: 50px;
@@ -2633,7 +2659,7 @@ html[dir=rtl] .footer .footer-bar .creation {
 
   .slider .gallery-thumbs .swiper-slide-active span {
     width: 100%;
-    font-size: 8vw;
+    font-size: 4vw;
     line-height: 11vw;
   }
 
@@ -2776,6 +2802,23 @@ html[dir=rtl] .footer .footer-bar .creation {
 }
 /* RESPONSIVE MOBILE FIXES */
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+
+  .slider .gallery-thumbs .swiper-slide-active span{
+    width: 100%;
+    font-size: 7vw;
+    line-height: 11vw;
+  }
+  .slider .gallery-thumbs .swiper-slide-active a{
+    font-size: 3vw;
+  }
+  .footerimg  {
+    width: 30%;
+    margin-bottom: 5vh;
+  }
+  .content-block.selected{
+    min-height:40vh;
+  }
+  
   .section-title {
     font-size: 9vw;
     margin-bottom: 40px;
@@ -2840,10 +2883,6 @@ html[dir=rtl] .footer .footer-bar .creation {
   
   .left-side .follow-us {
     display: none;
-  }
-
-  .left-side .logo{
-    margin-bottom: 0px;
   }
 
   .slide-progress {
@@ -3064,6 +3103,13 @@ html[dir=rtl] .footer .footer-bar .creation {
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* Slider  */
+.linkedin-perso{
+  position: relative;
+  margin-left: 65%;
+  margin-top:5%;
+}
+
 .wrapper {
   padding-bottom: 100px ;
   width: 100%;
@@ -3097,7 +3143,7 @@ html[dir=rtl] .footer .footer-bar .creation {
 .wrapper .carousel{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
+  grid-auto-columns: calc((100% / 3));
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 16px;
@@ -3160,13 +3206,25 @@ html[dir=rtl] .footer .footer-bar .creation {
 
 @media screen and (max-width: 900px) {
   .wrapper .carousel {
-    grid-auto-columns: calc((100% / 2) - 9px);
+    grid-auto-columns: calc((100% / 2));
   }
 }
 
 @media screen and (max-width: 600px) {
   .wrapper .carousel {
     grid-auto-columns: 100%;
+    padding-left: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .wrapper i:first-child{
+    left: 0px;
+    z-index:10;
+  }
+  .wrapper i:last-child{
+    right: 0px;
+    z-index:10;
   }
 }
 

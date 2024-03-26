@@ -47,7 +47,7 @@ try {
     "message"
   } = "Message";
 
-  $body = "Here is the message from yourwebsite:\n\n";
+  $body = "Message du site Antemys:\n\n";
   foreach ( $fields as $a => $b ) {
     $body .= sprintf( "%20s: %s\n", $b, $_REQUEST[ $a ] );
   }
@@ -56,7 +56,7 @@ try {
   $mail->AltBody = $body;
 
   $mail->send();
-  echo 'Message has been sent';
+  echo 'Message envoyé';
 } catch ( Exception $e ) {
   echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
